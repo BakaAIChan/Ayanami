@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Mapper.ayanamiMapper">
+
+
+    <select id="count" resultType="java.lang.Integer">
+        select count(*) from ayanami
+    </select>
+    <select id="selectById" resultType="Domain.ayanami">
+        select * from ayanami where id=#{id}
+    </select>
+    <select id="selectAll" resultType="Domain.ayanami">
+        select * from ayanami
+    </select>
+</mapper>
